@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     
     var clickCount: Int = 0     //버튼 토글 기능 사용 변수
     
@@ -97,11 +97,25 @@ class ViewController: UIViewController {
         self.txtInterval.frame = CGRect(x: 240, y: 200, width: 100, height: 30)
         self.txtInterval.text = "0분마다"
         self.txtInterval.font = UIFont.systemFont(ofSize: 12)
-        self.txtInterval.textColor = UIColor.red
+        self.txtInterval.textColor = appDelegate.Common?.UIColorFromRGB(rgbValue: 0xFF0000)
         self.view.addSubview(txtInterval)
         
         self.paramUpdate.addTarget(self, action: #selector(presentUpdateValue(_:)), for: .valueChanged)
         self.paramInterval.addTarget(self, action: #selector(presentIntervalValue(_:)), for: .valueChanged)
+        
+        let submitBtn = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(submit(_:)))
+        self.navigationItem.rightBarButtonItem = submitBtn
+    }
+    
+    @objc func submit(_ sender: Any) {
+        
+        // 프로그래밍 방식으로 다음 화면으로 넘기는 방법
+        let rvc = ReadViewController()
+        rvc.pEmail = self.paramEmail.text
+        rvc.pUpdate = self.paramUpdate.isOn
+        rvc.pInterval = self.paramInterval.value
+        
+        self.navigationController?.pushViewController(rvc, animated: true)
     }
     
     @objc func presentUpdateValue(_ sender: UISwitch) {
@@ -124,12 +138,6 @@ class ViewController: UIViewController {
                 btn.setTitle("클릭 되었습니다.", for: UIControlState.normal)
             }
         }
-    }
-    
-    //UIColor 헥사값 사용 함수
-    //ex) UIColorFromRGB(#FFFFFF)
-    func UIColorFromRGB(rgbValue: UInt, alpha: CGFloat = 1.0) ->UIColor {
-        return UIColor(red: CGFloat((rgbValue & 0xFF0000) >> 16 ) / 255.0, green: CGFloat((rgbValue & 0x00FF00) >> 8 ) / 255.0, blue: CGFloat(rgbValue & 0x0000FF) / 255.0, alpha: alpha)
     }
 }
 
