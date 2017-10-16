@@ -55,13 +55,13 @@ class ViewController: BaseViewController {
         //        }
         
         let lblUpdate = UILabel()
-        lblUpdate.frame = CGRect(x: 30, y: 150, width: 80, height: 30)
+        lblUpdate.frame = CGRect(x: lblEmail.frame.origin.x, y: 150, width: 80, height: 30)
         lblUpdate.text = "자동갱신"
         lblUpdate.font = UIFont.systemFont(ofSize: 14)
         self.view.addSubview(lblUpdate)
         
         let lblInterval = UILabel()
-        lblInterval.frame = CGRect(x: 30, y: 200, width: 80, height: 30)
+        lblInterval.frame = CGRect(x: lblEmail.frame.origin.x, y: 200, width: 80, height: 30)
         lblInterval.text = "갱신주기"
         lblInterval.font = UIFont.systemFont(ofSize: 14)
         self.view.addSubview(lblInterval)
@@ -74,12 +74,12 @@ class ViewController: BaseViewController {
         self.view.addSubview(self.paramEmail)
         
         self.paramUpdate = UISwitch()
-        self.paramUpdate.frame = CGRect(x: 125, y: 150, width: 50, height: 30)
+        self.paramUpdate.frame = CGRect(x: paramEmail.frame.origin.x, y: 150, width: 50, height: 30)
         self.paramUpdate.setOn(true, animated: true)
         self.view.addSubview(self.paramUpdate)
         
         self.paramInterval = UIStepper()
-        self.paramInterval.frame = CGRect(x: 125, y: 200, width: 50, height: 30)
+        self.paramInterval.frame = CGRect(x: paramEmail.frame.origin.x, y: 200, width: 50, height: 30)
         self.paramInterval.minimumValue = 0
         self.paramInterval.maximumValue = 100
         self.paramInterval.stepValue = 1
@@ -94,7 +94,7 @@ class ViewController: BaseViewController {
         self.view.addSubview(self.txtUpdate)
         
         self.txtInterval = UILabel()
-        self.txtInterval.frame = CGRect(x: 240, y: 200, width: 100, height: 30)
+        self.txtInterval.frame = CGRect(x: txtUpdate.frame.origin.x, y: 200, width: 100, height: 30)
         self.txtInterval.text = "0분마다"
         self.txtInterval.font = UIFont.systemFont(ofSize: 12)
         self.txtInterval.textColor = appDelegate.Common?.UIColorFromRGB(rgbValue: 0xFF0000)
