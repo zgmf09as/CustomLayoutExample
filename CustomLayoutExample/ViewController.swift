@@ -14,6 +14,8 @@ class ViewController: BaseViewController {
     
     //    @IBOutlet과 비슷한 역할
     var btn: UIButton!
+    var btn2: UIButton!
+    
     var paramEmail: UITextField! // email text field
     var paramUpdate: UISwitch!  // switch instance
     var paramInterval: UIStepper!
@@ -28,8 +30,18 @@ class ViewController: BaseViewController {
         btn.frame = CGRect(x: 50, y: 100, width: 150, height: 30)
         btn.setTitle("테스트버튼", for: UIControlState.normal)
         btn.center = CGPoint(x: self.view.frame.size.width/2 , y: self.view.frame.size.height/2) //중앙배치
+        btn.tag = 1
         self.view.addSubview(btn)
         btn.addTarget(self, action: #selector(btnOnClick(_:)), for: .touchUpInside)
+        
+        btn2 = UIButton(type: UIButtonType.system)
+        btn2.frame = CGRect(x: btn.frame.origin.x, y: btn.frame.origin.y + btn.frame.height, width: 150, height: 30)
+        btn2.setTitle("다음 화면 으로", for: UIControlState.normal)
+        //btn2.center = CGPoint(x: self.view.frame.size.width/2 , y: self.view.frame.size.height/2) //중앙배치
+        btn2.tag = 2
+        self.view.addSubview(btn2)
+        btn2.addTarget(self, action: #selector(btnOnClick(_:)), for: .touchUpInside)
+        
 //        영역 및 위치 선정은 맨 마지막이 기준이 된다.
         
         self.navigationItem.title = "설정"
@@ -129,13 +141,25 @@ class ViewController: BaseViewController {
     @objc func btnOnClick(_ sender: Any) {
         if let btn = sender as? UIButton {
             
-            clickCount += 1
-            
-            if (clickCount % 2) == 0 {
-                btn.setTitle("테스트버튼", for: UIControlState.normal)
-            } else
-            {
-                btn.setTitle("클릭 되었습니다.", for: UIControlState.normal)
+            switch btn.tag {
+            case 1:
+                clickCount += 1
+                
+                if (clickCount % 2) == 0 {
+                    btn.setTitle("테스트버튼", for: UIControlState.normal)
+                } else
+                {
+                    btn.setTitle("클릭 되었습니다.", for: UIControlState.normal)
+                }
+            case 2:
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabbar") as? UITabBarController else {
+                    return
+                }
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            default:
+                break
             }
         }
     }
