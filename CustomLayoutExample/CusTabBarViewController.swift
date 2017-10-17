@@ -33,6 +33,7 @@ class CusTabBarViewController: UITabBarController {
             
             for index in 0..<tbItems.count {
                 tbItems[index].image = UIImage(named: strImageArray[index])?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+                tbItems[index].selectedImage = UIImage(named: "checkmark")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal) //선택시 이미지 변경
                 tbItems[index].title = strTitleArray[index]
             }
         }
