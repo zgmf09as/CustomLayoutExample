@@ -11,6 +11,5 @@ import UIKit
 // 공통으로 사용할 내용을 가진 컨트롤러
 class BaseViewController: UIViewController {
 
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
+    let appDelegate = UIApplication.shared.delegate as! NewAppDelegate
 }

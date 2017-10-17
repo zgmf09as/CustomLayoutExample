@@ -33,6 +33,7 @@
 		423D798F1F95DE360012DF36 /* connectivity-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 423D79821F95DE360012DF36 /* connectivity-bar.png */; };
 		423D79901F95DE360012DF36 /* homes_119.png in Resources */ = {isa = PBXBuildFile; fileRef = 423D79831F95DE360012DF36 /* homes_119.png */; };
 		423D79911F95DE360012DF36 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 423D79841F95DE360012DF36 /* facebook@2x.png */; };
+		423D79931F95F4070012DF36 /* NewAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423D79921F95F4070012DF36 /* NewAppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		423D79821F95DE360012DF36 /* connectivity-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bar.png"; sourceTree = "<group>"; };
 		423D79831F95DE360012DF36 /* homes_119.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homes_119.png; sourceTree = "<group>"; };
 		423D79841F95DE360012DF36 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
+		423D79921F95F4070012DF36 /* NewAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				423D79021F94ACDA0012DF36 /* SecondViewController.swift */,
 				423D79041F94ACE90012DF36 /* ThirdViewController.swift */,
 				423D79681F95CFF10012DF36 /* CusTabBarViewController.swift */,
+				423D79921F95F4070012DF36 /* NewAppDelegate.swift */,
 			);
 			path = CustomLayoutExample;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				423D79051F94ACE90012DF36 /* ThirdViewController.swift in Sources */,
 				423D78EE1F9480460012DF36 /* CustomLayoutExample.xcdatamodeld in Sources */,
 				423D78E81F9480460012DF36 /* ViewController.swift in Sources */,
+				423D79931F95F4070012DF36 /* NewAppDelegate.swift in Sources */,
 				423D78FB1F9485650012DF36 /* ReadViewController.swift in Sources */,
 				423D78FD1F9485E90012DF36 /* CommonModel.swift in Sources */,
 				423D79011F94ACCE0012DF36 /* FirstViewController.swift in Sources */,
