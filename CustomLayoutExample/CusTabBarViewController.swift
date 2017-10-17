@@ -32,9 +32,13 @@ class CusTabBarViewController: UITabBarController {
             let strImageArray = ["designbump","rss","facebook"]
             
             for index in 0..<tbItems.count {
-                tbItems[index].image = UIImage(named: strImageArray[index])?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-                tbItems[index].selectedImage = UIImage(named: "checkmark")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal) //선택시 이미지 변경
-                tbItems[index].title = strTitleArray[index]
+                let tbItem = tbItems[index]
+                tbItem.image = UIImage(named: strImageArray[index])?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+                tbItem.selectedImage = UIImage(named: "checkmark")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal) //선택시 이미지 변경
+                tbItem.title = strTitleArray[index]
+                tbItem.setTitleTextAttributes([NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.gray], for: .disabled)
+                tbItem.setTitleTextAttributes([NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.red], for: .selected)
+                tbItem.setTitleTextAttributes([NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.systemFont(ofSize: 13)], for: .normal)
             }
         }
         
