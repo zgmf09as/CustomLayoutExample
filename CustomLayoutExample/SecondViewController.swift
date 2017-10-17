@@ -28,7 +28,5 @@ class SecondViewController: BaseViewController {
         
         self.view.addSubview(title)
         
-//        self.tabBarItem.image = UIImage(named: "file-tree.png")
-//        self.tabBarItem.title = "File"
     }
 }

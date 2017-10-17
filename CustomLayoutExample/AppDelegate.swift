@@ -18,6 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Common = CommonModel()
+        
+//        if let tbC = self.window?.rootViewController as? UITabBarController {
+//            if let tbItems = tbC.tabBar.items {
+//                let strTitleArray = ["Calendar","File","Photo"]
+//                let strImageArray = ["calendar","file-tree","photo"]
+//                
+//                for index in 0..<tbItems.count {
+//                    tbItems[index].image = UIImage(named: strImageArray[index])
+//                    tbItems[index].title = strTitleArray[index]
+//                }
+//            }
+//        }
+        
         return true
     }
 

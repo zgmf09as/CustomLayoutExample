@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirsstViewController: BaseViewController {
+class FirstViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,5 @@ class FirsstViewController: BaseViewController {
         
         self.view.addSubview(title)
         
-//        self.tabBarItem.image = UIImage(named: "calendar.png")
-//        self.tabBarItem.title = "Calendar"
     }
 }

@@ -26,8 +26,6 @@ class ThirdViewController: BaseViewController {
         title.center.x = self.view.frame.width/2
         
         self.view.addSubview(title)
-        
-//        self.tabBarItem.image = UIImage(named: "photo.png")
-//        self.tabBarItem.title = "Photo"
+
     }
 }

@@ -41,10 +41,9 @@
             </objects>
             <point key="canvasLocation" x="199" y="-112"/>
         </scene>
-        <!--File-->
+        <!--Item2-->
         <scene sceneID="yt1-Gp-JCv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sBW-Om-KQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="zSZ-9d-ND1" customClass="SecondViewController" customModule="CustomLayoutExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ElL-qa-ici">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -52,12 +51,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ZHA-cT-v1e"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="File" image="file-tree.png" id="fiS-0E-ZFc"/>
+                    <tabBarItem key="tabBarItem" title="Item2" id="fiS-0E-ZFc"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBW-Om-KQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="401" y="1364"/>
         </scene>
-        <!--Photo-->
+        <!--Item3-->
         <scene sceneID="RbX-1d-N8q">
             <objects>
                 <viewController id="Tny-Ug-e1T" customClass="ThirdViewController" customModule="CustomLayoutExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,23 +67,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="wQP-59-ux4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Photo" image="photo.png" id="0ce-Nv-zNd"/>
+                    <tabBarItem key="tabBarItem" title="Item3" id="0ce-Nv-zNd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59m-d8-Geb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1182" y="1343"/>
         </scene>
-        <!--Calendar-->
+        <!--Item1-->
         <scene sceneID="s52-IE-nCG">
             <objects>
-                <viewController id="Ci0-Pt-8G2" customClass="FirsstViewController" customModule="CustomLayoutExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ci0-Pt-8G2" customClass="FirstViewController" customModule="CustomLayoutExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P6g-eU-DIE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="kqM-dk-zEi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar.png" id="o7s-5P-Lq2"/>
+                    <tabBarItem key="tabBarItem" title="Item1" id="o7s-5P-Lq2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="An1-tW-swS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,9 +109,4 @@
             <point key="canvasLocation" x="401" y="561"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="calendar.png" width="30" height="30"/>
-        <image name="file-tree.png" width="30" height="30"/>
-        <image name="photo.png" width="30" height="30"/>
-    </resources>
 </document>
